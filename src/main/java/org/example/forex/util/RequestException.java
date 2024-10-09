@@ -1,4 +1,4 @@
-package org.example.forex;
+package org.example.forex.util;
 //обработка ошибок неверного кода валюты для конвертации
 
 public class RequestException extends RuntimeException {

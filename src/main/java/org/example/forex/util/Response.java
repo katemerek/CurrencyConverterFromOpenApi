@@ -1,4 +1,4 @@
-package org.example.forex;
+package org.example.forex.util;
 
 import lombok.Data;
 import org.springframework.http.HttpStatus;
