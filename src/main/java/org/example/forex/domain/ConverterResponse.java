@@ -1,12 +1,8 @@
-package org.example.forex;
+package org.example.forex.domain;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Data;
-import org.springframework.data.crossstore.ChangeSetPersister;
-import org.springframework.lang.NonNull;
-
-import java.math.BigDecimal;
 @Data
 public class ConverterResponse {
     private String base_currency;

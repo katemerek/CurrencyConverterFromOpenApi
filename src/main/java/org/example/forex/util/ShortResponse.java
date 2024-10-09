@@ -1,12 +1,10 @@
-package org.example.forex;
+package org.example.forex.util;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.*;
 
-import java.math.BigDecimal;
 @Getter
 @Setter
 @AllArgsConstructor

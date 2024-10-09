@@ -3,8 +3,10 @@ package org.example.forex;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.example.forex.util.ShortResponse;
+
 //вспоминала как парсить джейсоны, в том числе вложенные
-public class TestJson {
+public class JsonParsingTest {
     public static void main(String[] args) throws JsonProcessingException {
 String jsonExample = """
         {
