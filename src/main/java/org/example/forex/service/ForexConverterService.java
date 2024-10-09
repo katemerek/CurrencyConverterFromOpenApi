@@ -16,14 +16,14 @@ public class ForexConverterService implements ConverterService {
     private final RestClient.Builder restClientBuilder;
 
     @Override
-    public Optional<ConverterResponse> get(Currency baseCurrency, Currency currencies, Double quantity) {
+    public Optional<ConverterResponse> get(String apikey, Currency baseCurrency, Currency currencies, Double quantity) {
 
         RestClient restClient = restClientBuilder.baseUrl("https://api.currencyapi.com/v3/").build();
 
         return Optional.ofNullable(restClient.get()
                 .uri(uriBuilder -> {
                     URI build = uriBuilder.path("latest")
-                                    .queryParam("apikey", "cur_live_yJX8pKp6yPOOOHGqyjZiZEN0sdH8LpuzM8b9yk37")
+                                    .queryParam("apikey", apikey)
                                     .queryParam("base_currency", baseCurrency)
                                     .queryParam("currencies", currencies)
                                     .build();

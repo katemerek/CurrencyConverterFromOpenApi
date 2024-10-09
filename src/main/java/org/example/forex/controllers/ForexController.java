@@ -19,8 +19,8 @@ public class ForexController {
     private final ConverterService converterService;
 
     @GetMapping(value = "/converter")
-    private ConverterResponse Request(@Parameter(description = "Базовая валюта") @RequestParam(name = "base_currency") Currency baseCurrency, @RequestParam(name = "currencies") Currency currencies, @RequestParam(name = "quantity") Double quantity) {
-        return converterService.get(baseCurrency, currencies, quantity)
+    private ConverterResponse Request(@RequestParam(name = "apikey") String apikey, @Parameter(description = "Базовая валюта") @RequestParam(name = "base_currency") Currency baseCurrency, @RequestParam(name = "currencies") Currency currencies, @RequestParam(name = "quantity") Double quantity) {
+        return converterService.get(apikey, baseCurrency, currencies, quantity)
                 .orElseThrow(() -> new RuntimeException("Could not find converter for currency " + baseCurrency.toString()));
     }
 
