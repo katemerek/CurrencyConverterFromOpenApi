@@ -2,7 +2,6 @@ package org.example.forex.controllers;
 
 import io.swagger.v3.oas.annotations.Parameter;
 import lombok.RequiredArgsConstructor;
-import org.example.forex.config.ForexConfig;
 import org.example.forex.domain.ConverterResponse;
 import org.example.forex.enumeration.Currency;
 import org.example.forex.service.ConverterService;
@@ -14,8 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequiredArgsConstructor
 public class ForexController {
-    private final HttpMessageConverters messageConverters;
-    private final ForexConfig forexConfig;
     private final ConverterService converterService;
 
     @GetMapping(value = "/converter")
