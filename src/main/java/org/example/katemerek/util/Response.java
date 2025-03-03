@@ -1,4 +1,4 @@
-package org.example.forex;
+package org.example.katemerek.util;
 
 import lombok.Data;
 import org.springframework.http.HttpStatus;
@@ -7,9 +7,6 @@ public class Response {
 
     private String message;
     private HttpStatus status;
-
-    public Response() {
-    }
 
     public Response(String message) {
         this.message = message;
